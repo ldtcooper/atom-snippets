@@ -1,0 +1,55 @@
+# SVG
+
+'.text.html':
+  'Rectangle':
+    'prefix': 'rec'
+    'body': '<rect x="${1:#}" y="${1:#}" width="${3:#}" height="${4:#}"/>'
+  'Circle':
+    'prefix': 'cir'
+    'body': '<circle r="${1:#}" cx="${2:#}" cy="${3:#}" />'
+  'Group':
+    'prefix': 'g'
+    'body': '<g></g>'
+  'Definition':
+    'prefix': 'defs'
+    'body': '<defs>\n \n</defs>'
+  'Text':
+    'prefix': 'txt'
+    'body': '<text x="${1:#}" y="${2:#}">${3:#}</text>'
+
+#ES6
+
+'.source.js':
+  'For Loop':
+    'prefix': 'for'
+    'body': """
+      for (let i = 0; i < ${1:array}.length; i++) {
+        ${2:}
+      }
+    """
+  'For Each':
+    'prefix': 'fore'
+    'body': """
+      forEach( (${1:el}) => {
+        ${2:}
+      });
+    """
+  'Map':
+    'prefix': 'map'
+    'body': """
+      map( (${1:el}) => {
+        ${2:}
+      });
+    """
+  'Import':
+    'prefix': 'imp'
+    'body': "import ${1:package} from '${2:path}';"
+  'Import Many':
+    'prefix': 'imps'
+    'body': "import {${1:packages}} from '${2:path}';"
+  'Import As':
+    'prefix': 'impas'
+    'body': "import * as ${1:alias} from '${2:path}';"
+  'Single Line Arrow Function':
+    'prefix': 'saf'
+    'body': '(${1:el}) => ${2:#};'
