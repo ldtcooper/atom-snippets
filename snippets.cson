@@ -53,3 +53,6 @@
   'Single Line Arrow Function':
     'prefix': 'saf'
     'body': '(${1:el}) => ${2:#};'
+  'Require (>=ES5)':
+    'prefix': 'req'
+    'body': 'const ${1:package} = require(${1:package})'
