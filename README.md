@@ -6,7 +6,7 @@
 
 # Snippets
 
-So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are always being added though, so check back often. The below examples show the shortcut in comments above the code that it will generate.
+So far, this repo has snippets for SVG(HTML), JavaScript, React/Redux, and Markdown. More are always being added though, so check back often. The below examples show the shortcut in comments above the code that it will generate.
 
 ## SVG Snippets
 ```html
@@ -85,7 +85,7 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
   (el) => #;
 
   // req
-  const package = require("package");
+  const package = require("path");
 
   // fun (overrides default function snippet)
   const functionName = function functionName() {
@@ -100,7 +100,8 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
   React import statement, basic class component structure, and class export statement.
 
   // container
-  Import statements for connect (from React-Redux) and the contained component. Also includes the skeleton for mapStateToProps, mapDispatchToProps and the export statement using connect.
+  Import statements for connect (from React-Redux) and the contained component.
+  Also includes the skeleton for mapStateToProps, mapDispatchToProps and the export statement using connect.
 
   // root
   Root file template.
