@@ -27,6 +27,15 @@
         ${2:}
       }
     """
+  'For-in Loop':
+    'prefix': 'forin'
+    'body': """
+      for (let ${1:variable} in ${2:object}) {
+        if (${2:object}.hasOwnProperty(${1:variable})) {
+          
+        }
+      }
+    """
   'For Each':
     'prefix': 'fore'
     'body': """
