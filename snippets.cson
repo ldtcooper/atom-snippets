@@ -64,6 +64,13 @@
         ${2:}
       });
     """
+  'Reduce':
+    'prefix': 'red'
+    'body': """
+      reduce( (${1:acc}, ${2:val}) => {
+
+      });
+    """
   'Import':
     'prefix': 'imp'
     'body': "import ${1:package} from '${2:path}';"

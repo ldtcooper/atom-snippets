@@ -62,6 +62,11 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
 
   });
 
+  // red
+  reduce( (acc, val) => {
+
+  });
+
   // imp
   import package from 'path';
 
