@@ -76,6 +76,7 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
   
   // entry
   Entry file template.
+```
 
 ## Markdown
 **NB:** The autocomplete commands also include ending quotes, but those have been excluded here for display reasons.
