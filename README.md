@@ -52,6 +52,13 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
 
   });
 
+  //evr
+  every( (el) => {
+
+  });
+
+  
+
   // imp
   import package from 'path';
 
