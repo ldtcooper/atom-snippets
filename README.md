@@ -36,13 +36,6 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
 
   }
 
-  // forin (overrides default for-in loop snippet)
-  for (let variable in object) {
-    if (object.hasOwnProperty(variable)) {
-
-    }
-  }
-
   // fore
   forEach( (el) => {
 
@@ -68,6 +61,22 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
   // req
   const package = require("package");
 ```
+
+## React/Redux
+
+```javascript
+  // class_component
+  React import statement, basic class component structure, and class export statement.
+  
+  // container
+  Import statements for connect (from React-Redux) and the contained component. Also includes the skeleton for mapStateToProps, mapDispatchToProps and the export statement using connect.
+  
+  // root
+  Root file template.
+  
+  // entry
+  Entry file template.
+
 ## Markdown
 **NB:** The autocomplete commands also include ending quotes, but those have been excluded here for display reasons.
 
