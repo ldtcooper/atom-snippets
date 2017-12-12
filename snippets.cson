@@ -113,3 +113,6 @@
       ${1:python}
       ```
     """
+  'Checkbox':
+    'prefix': 'chk'
+    'body': '- [ ] ${1:item}'
