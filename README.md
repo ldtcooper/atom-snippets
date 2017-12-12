@@ -61,3 +61,47 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
   // req
   const package = require("package");
 ```
+## Markdown
+**NB:** The autocomplete commands also include ending quotes, but those have been excluded here for display reasons.
+
+```markdown
+  h1
+  # header
+
+  h2
+  ## header
+
+  h3
+  ### header
+
+  h4
+  #### header
+
+  h5
+  ##### header
+
+  h6
+  ###### header
+
+  css
+  ```css
+
+  html
+  ```html
+
+
+  javascript
+  ```javascript
+
+
+  ruby
+  ```ruby
+
+
+  python
+  ```python
+
+  chk
+  - [ ] item
+
+```
