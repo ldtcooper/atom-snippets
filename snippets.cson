@@ -32,7 +32,7 @@
     'body': """
       for (let ${1:variable} in ${2:object}) {
         if (${2:object}.hasOwnProperty(${1:variable})) {
-          
+
         }
       }
     """

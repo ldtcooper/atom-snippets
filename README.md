@@ -36,6 +36,13 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
 
   }
 
+  // forin (overrides default for-in loop snippet)
+  for (let variable in object) {
+    if (object.hasOwnProperty(variable)) {
+
+    }
+  }
+
   // fore
   forEach( (el) => {
 
