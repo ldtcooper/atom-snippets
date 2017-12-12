@@ -57,6 +57,13 @@
         ${2:}
       });
     """
+  'Filter':
+    'prefix': 'fil'
+    'body': """
+      filter( (${1:el}) => {
+        ${2:}
+      });
+    """
   'Import':
     'prefix': 'imp'
     'body': "import ${1:package} from '${2:path}';"
