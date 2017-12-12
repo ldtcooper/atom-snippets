@@ -28,3 +28,36 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
   <!-- txt -->
   <text x="" y=""></text>
 ```
+
+## JavaScript
+```javascript
+  // for (overrides default for loop snippet)
+  for (let i = 0; i < array.length; i++) {
+
+  }
+
+  // fore
+  forEach( (el) => {
+
+  });
+
+  // map
+  map( (el) => {
+
+  });
+
+  // imp
+  import package from 'path';
+
+  // imps
+  import {packages} from 'path';
+
+  // impas
+  import * as alias from 'path';
+
+  // saf
+  (el) => #;
+
+  // req
+  const package = require("package");
+```
