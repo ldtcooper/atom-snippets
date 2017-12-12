@@ -71,6 +71,13 @@
 
       });
     """
+  'Some':
+    'prefix': 'some'
+    'body': """
+      some( (${1:el}) => {
+
+      });
+    """
   'Import':
     'prefix': 'imp'
     'body': "import ${1:package} from '${2:path}';"

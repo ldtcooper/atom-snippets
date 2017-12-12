@@ -57,6 +57,11 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
 
   });
 
+  // some
+  some( (el) => {
+
+  });
+
   // fil
   filter( (el) => {
 
