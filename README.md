@@ -1,9 +1,8 @@
 # Instructions
-1. Open up Atom
-2. Open the *Atom > Snippets...* option in the toolbar
-3. Copy and paste the contents of the [snippets.cson](/snippets.cson) file into your snippets.cson file.
-4. Save snippets.cson
-5. Make sure to star this repo.
+1. In Atom, open the *Atom > Snippets...* option in the menu bar
+2. Copy and paste the contents of the [snippets.cson](/snippets.cson) file into your snippets.cson file.
+3. Save snippets.cson
+4. Make sure to star this repo.
 
 # Snippets
 
@@ -67,6 +66,11 @@ So far, this repo has snippets for SVG(HTML), JavaScript, and Markdown. More are
 
   // req
   const package = require("package");
+
+  // fun (overrides default function snippet)
+  const functionName = function functionName() {
+
+  };
 ```
 ## Markdown
 **NB:** The autocomplete commands also include ending quotes, but those have been excluded here for display reasons.

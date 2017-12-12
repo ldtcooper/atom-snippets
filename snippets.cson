@@ -81,6 +81,13 @@
 
       export default connect(mapStateToProps, mapDispatchToProps)(Component);
     """
+  'Function':
+    'prefix': 'fun'
+    'body': """
+      const ${1:functionName} = function ${1:functionName}() {
+
+      };
+    """
 
 '.source.jsx':
   'entryFile template':
