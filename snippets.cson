@@ -1,4 +1,4 @@
-# SVG
+#SVG
 
 '.text.html':
   'Rectangle':
@@ -17,7 +17,7 @@
     'prefix': 'txt'
     'body': '<text x="${1:#}" y="${2:#}">${3:#}</text>'
 
-#ES6
+# JavaScript
 
 '.source.js':
   'For Loop':
@@ -57,6 +57,8 @@
     'prefix': 'req'
     'body': 'const ${1:package} = require("${1:package}");'
 
+# Markdown
+
 '.source.gfm':
   'h1':
     'prefix': 'h1'
@@ -77,35 +79,35 @@
     'prefix': 'h6'
     'body': '###### ${1:header}'
   'CSS Highlighting':
-    'prefix': '`css'
+    'prefix': 'css'
     'body': """
       ```css
       ${1:css}
       ```
     """
   'HTML Highlighting':
-    'prefix': '`html'
+    'prefix': 'html'
     'body': """
       ```html
       ${1:html}
       ```
     """
   'JavaScript Highlighting':
-    'prefix': '`javascript'
+    'prefix': 'javascript'
     'body': """
       ```javascript
       ${1:javascript}
       ```
     """
   'Ruby Highlighting':
-    'prefix': '`ruby'
+    'prefix': 'ruby'
     'body': """
       ```ruby
       ${1:ruby}
       ```
     """
   'Python Highlighting':
-    'prefix': '`python'
+    'prefix': 'python'
     'body': """
       ```python
       ${1:python}
