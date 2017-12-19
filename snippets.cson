@@ -172,6 +172,9 @@
 
       export default ClassName;
     """
+  'Route':
+    'prefix': 'rou'
+    'body': '<Route path="/${1:path}" component={${2:component}}/>'
 # Markdown
 
 '.source.gfm':

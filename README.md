@@ -95,7 +95,7 @@ So far, this repo has snippets for SVG(HTML), JavaScript, React/Redux, and Markd
 
 ## React/Redux
 
-```javascript
+```
   // class_component
   React import statement, basic class component structure, and class export statement.
 
@@ -108,6 +108,12 @@ So far, this repo has snippets for SVG(HTML), JavaScript, React/Redux, and Markd
 
   // entry
   Entry file template.
+
+```
+
+
+```xml
+  <Route path="/path" component={component}/>
 ```
 
 ## Markdown
