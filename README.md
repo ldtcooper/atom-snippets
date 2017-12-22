@@ -156,6 +156,9 @@ So far, this repo has snippets for SVG(HTML), JavaScript, React/Redux, and Markd
   python
   ```python
 
+  xml
+  ```xml
+
   chk
   - [ ] item
 

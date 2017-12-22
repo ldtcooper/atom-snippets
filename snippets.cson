@@ -154,7 +154,7 @@
   'react class component template':
     'prefix': 'class_component'
     'body': """
-      import React from 'react'
+      import React from 'react';
 
       class ClassName extends React.Component {
         constructor(props) {
@@ -166,7 +166,7 @@
           <div>
 
           </div>
-          )
+          );
         }
       }
 
@@ -229,6 +229,13 @@
     'body': """
       ```python
       ${1:python}
+      ```
+    """
+  'XML Highlighting':
+    'prefix': 'xml'
+    'body': """
+      ```xml
+      ${1:xml}
       ```
     """
   'Checkbox':
