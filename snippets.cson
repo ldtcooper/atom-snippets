@@ -1,243 +1,391 @@
 #SVG
 
 '.text.html':
-  'Rectangle':
-    'prefix': 'rec'
-    'body': '<rect x="${1:#}" y="${1:#}" width="${3:#}" height="${4:#}"/>'
-  'Circle':
-    'prefix': 'cir'
-    'body': '<circle r="${1:#}" cx="${2:#}" cy="${3:#}" />'
-  'Group':
-    'prefix': 'g'
-    'body': '<g></g>'
-  'Definition':
-    'prefix': 'defs'
-    'body': '<defs>\n \n</defs>'
-  'Text':
-    'prefix': 'txt'
-    'body': '<text x="${1:#}" y="${2:#}">${3:#}</text>'
+    'Rectangle':
+        'prefix': 'rec'
+        'body': '<rect x="${1:#}" y="${1:#}" width="${3:#}" height="${4:#}"/>'
+    'Circle':
+        'prefix': 'cir'
+        'body': '<circle r="${1:#}" cx="${2:#}" cy="${3:#}" />'
+    'Group':
+        'prefix': 'g'
+        'body': '<g></g>'
+    'Definition':
+        'prefix': 'defs'
+        'body': '<defs>\n \n</defs>'
+    'Text':
+        'prefix': 'txt'
+        'body': '<text x="${1:#}" y="${2:#}">${3:#}</text>'
 
 # JavaScript
 
 '.source.js':
-  'For Loop':
-    'prefix': 'for'
-    'body': """
-      for (let i = 0; i < ${1:array}.length; i++) {
-        ${2:}
-      }
-    """
-  'For-in Loop':
-    'prefix': 'forin'
-    'body': """
-      for (let ${1:variable} in ${2:object}) {
-        if (${2:object}.hasOwnProperty(${1:variable})) {
+    'For Loop':
+        'prefix': 'for'
+        'body': """
+                  for (let i = 0; i < ${1:array}.length; i++) {
+                    ${2:}
+                  }
+                """
+    'For-in Loop':
+        'prefix': 'forin'
+        'body': """
+                  for (let ${1:variable} in ${2:object}) {
+                    if (${2:object}.hasOwnProperty(${1:variable})) {
+                    }
+                  }
+                """
+    'For Each':
+        'prefix': 'fore'
+        'body': """
+                  forEach((${1:el}, i) => {
+                    ${2:}
+                  });
+                """
+    'Map':
+        'prefix': 'map'
+        'body': """
+                  map((${1:el}, i) => {
+                    ${2:}
+                  });
+                """
+    'Every':
+        'prefix': 'evr'
+        'body': """
+                  every((${1:el}, i) => {
+                    ${2:}
+                  });
+                """
+    'Filter':
+        'prefix': 'fil'
+        'body': """
+                  filter((${1:el}, i) => {
+                    ${2:}
+                  });
+                """
+    'Reduce':
+        'prefix': 'red'
+        'body': """
+                  reduce((${1:acc}, ${2:val}) => {
+                  });
+                """
+    'Some':
+        'prefix': 'some'
+        'body': """
+                  some((${1:el}, i) => {
+                  });
+                """
+    'Any':
+        'prefix': 'any'
+        'body': """
+                  some((${1:el}, i) => {
+                  });
+                """
+    'Import':
+        'prefix': 'imp'
+        'body': "import ${1:package} from '${2:path}';"
+    'Import Many':
+        'prefix': 'imps'
+        'body': "import { ${1:packages} } from '${2:path}';"
+    'Import As':
+        'prefix': 'impas'
+        'body': "import * as ${1:alias} from '${2:path}';"
+    'Single Line Arrow Function':
+        'prefix': 'saf'
+        'body': '(${1:el}) => ${2:#}'
+    'Require (>=ES5)':
+        'prefix': 'req'
+        'body': 'const ${1:package} = require(\'${2:path}\');'
+    'React container template':
+        'prefix': 'container'
+        'body': """
+                    import { connect } from 'react-redux';
+                    import { ${1:Component} } from '${2:componentPath}';
 
-        }
-      }
-    """
-  'For Each':
-    'prefix': 'fore'
-    'body': """
-      forEach( (${1:el}) => {
-        ${2:}
-      });
-    """
-  'Map':
-    'prefix': 'map'
-    'body': """
-      map( (${1:el}) => {
-        ${2:}
-      });
-    """
-  'Every':
-    'prefix': 'evr'
-    'body': """
-      every( (${1:el}) => {
-        ${2:}
-      });
-    """
-  'Filter':
-    'prefix': 'fil'
-    'body': """
-      filter( (${1:el}) => {
-        ${2:}
-      });
-    """
-  'Reduce':
-    'prefix': 'red'
-    'body': """
-      reduce( (${1:acc}, ${2:val}) => {
+                    const mapStateToProps = (state) => ({
 
-      });
-    """
-  'Some':
-    'prefix': 'some'
-    'body': """
-      some( (${1:el}) => {
+                    });
 
-      });
-    """
-  'Import':
-    'prefix': 'imp'
-    'body': "import ${1:package} from '${2:path}';"
-  'Import Many':
-    'prefix': 'imps'
-    'body': "import {${1:packages}} from '${2:path}';"
-  'Import As':
-    'prefix': 'impas'
-    'body': "import * as ${1:alias} from '${2:path}';"
-  'Single Line Arrow Function':
-    'prefix': 'saf'
-    'body': '(${1:el}) => ${2:#};'
-  'Require (>=ES5)':
-    'prefix': 'req'
-    'body': 'const ${1:package} = require("${2:path}");'
-  'React container template':
-    'prefix': 'container'
-    'body': """
-      import { connect } from "react-redux";
-      import Component from "component_path"
+                    const mapDispatchToProps = (dispatch) => ({
 
-      const mapStateToProps = (state) => ({
+                    });
 
-      })
-
-      const mapDispatchToProps = (dispatch) => ({
-
-      })
-
-      export default connect(mapStateToProps, mapDispatchToProps)(Component);
-    """
-  'Function':
-    'prefix': 'fun'
-    'body': """
-      const ${1:functionName} = function ${1:functionName}() {
-
-      };
-    """
+                    export default connect(mapStateToProps, mapDispatchToProps)(${1:Component});
+                """
+    'Index Export':
+        'prefix': 'inexp'
+        'body': "export { default as ${1:component} } from '${2:path}';"
+    'then':
+        'prefix': 'then'
+        'body': 'then(${1:onFulfilled})'
+    'ESlint disable':
+      'prefix': 'esld'
+      'body': '//eslint-disable-line ${1:rules}'
+    'ESlint disable block':
+      'prefix': 'esldb'
+      'body': """
+                /* eslint-disable ${1:rules} */
+                ${2:code}
+                /* eslint-enable ${1:rules} */
+              """
+    'Object.assign':
+      'prefix': 'assign'
+      'body': 'Object.assign(${1:initialObj}, ${2:otherObjects})'
+    'extends':
+      'prefix': 'extends'
+      'body': 'extends ${1:parentClass}'
+    'setInterval':
+      'prefix': 'setin'
+      'body': 'setInterval(function, time);'
+    'Debugger':
+      'prefix': 'debug'
+      'body': 'debugger;'
+    'Object.keys':
+      'prefix': 'keys'
+      'body': 'Object.keys(${1:obj})'
+    'function':
+      'prefix': 'f()'
+      'body': 'function(${1:args}) {${2:functionMeat}}'
 
 '.source.jsx':
-  'entryFile template':
-    'prefix': 'entry'
-    'body': """
-      import React from 'react';
-      import ReactDOM from 'react-dom';
-      import Root from './components/root';
-      import configureStore from './store/store';
+    'entryFile template':
+        'prefix': 'entry'
+        'body': """
+            import React from 'react';
+            import ReactDOM from 'react-dom';
+            import Root from './components/root';
+            import configureStore from './store/store';
 
-      document.addEventListener("DOMContentLoaded", () => {
-        const store = configureStore();
-        const root = document.getElementById("root");
-        ReactDOM.render(<Root store={store}/>, root);
-      });
-    """
-  'rootFile template':
-    'prefix': 'root'
-    'body': """
-      import React from 'react';
-      import { Provider } from 'react-redux';
-      import { HashRouter } from 'react-router-dom';
+            document.addEventListener("DOMContentLoaded", () => {
+                const store = configureStore();
+                const root = document.getElementById("root");
+                ReactDOM.render(<Root store={store}/>, root);
+            });
+                """
+    'rootFile template':
+        'prefix': 'root'
+        'body': """
+                  import React from 'react';
+                  import { Provider } from 'react-redux';
+                  import { HashRouter } from 'react-router-dom';
+                  import App from './app';
+                  const Root = ({ store }) => (
+                    <Provider store={store}>
+                        <HashRouter>
+                            <App store={store}/>
+                        </HashRouter>
+                    </Provider>
+                  );
+                  export default Root;
+                """
+    'react class component template':
+        'prefix': 'class_component'
+        'body': """
+            import React from 'react';
+            import PropTypes from 'prop-types';
+            import './${4:SCSSFilename}.scss';
 
-      import App from './app';
+            class ${1:ClassComponent} extends React.Component {
+                constructor(props) {
+                    super(props);
+                }
 
-      const Root = ({ store }) => (
-        <Provider store={store}>
-          <HashRouter>
-            <App store={store}/>
-          </HashRouter>
-        </Provider>
-      );
+                render() {
+                    return (
+                        <div ${2:classOrId}="${3:name}">
 
-      export default Root;
-    """
-  'react class component template':
-    'prefix': 'class_component'
-    'body': """
-      import React from 'react';
+                        </div>
+                    );
+                }
+            }
 
-      class ClassName extends React.Component {
-        constructor(props) {
-          super(props);
-        }
+            ${1:ClassComponent}.propTypes = {
 
-        render() {
-          return (
-          <div>
+            };
 
-          </div>
-          );
-        }
-      }
+            export default ${1:ClassComponent};
+            """
+    'functional component template':
+      'prefix': 'func comp'
+      'body': """
+                import React from 'react';
+                import PropTypes from 'prop-types';
+                import './${4:SCSSFilename}.scss';
 
-      export default ClassName;
-    """
-  'Route':
-    'prefix': 'rou'
-    'body': '<Route path="/${1:path}" component={${2:component}}/>'
+                const ${1:ComponentName} = () => {
+                    return (
+                        <div ${2:classOrId}="${3:name}">
+
+                        </div>
+                    );
+                };
+
+                ${1:ComponentName}.propTypes = {
+
+                };
+
+                export default ${1:ComponentName};
+            """
+    'Route':
+        'prefix': 'rou'
+        'body': '<Route path="/${1:path}" component={${2:component}}/>'
+    'Image Tag':
+        'prefix': 'img'
+        'body': '<img src={${1:src}} alt="${2:alt-text}"/>'
+    'Class Name':
+        'prefix': 'clsn'
+        'body': 'className="${1:className}"'
+    'Anchor Tag':
+        'prefix': 'link'
+        'body': '<a href="${1:#}">${2:link}</a>'
+    'Div':
+        'prefix': 'div'
+        'body': """
+            <div className="${1:className}">
+                ${2:content}
+            </div>
+            """
+    'Section':
+        'prefix': 'sect'
+        'body': """
+            <section className="${1:className}">
+                ${2:content}
+            </section>
+            """
+    'setState':
+      'prefix': 'setState'
+      'body': 'this.setState({ ${1:key}: ${2:val} })'
+    'Event Target value':
+      'prefix': 'etv'
+      'body': 'e.target.value'
+    'dangerouslySetInnerHTML':
+      'prefix': 'danger'
+      'body': 'dangerouslySetInnerHTML={{__html: ${1:dangerHTML}}}'
+    'aria-hidden':
+      'prefix': 'aria-hidden'
+      'body': 'aria-hidden="true"'
+    'aria-live':
+      'prefix': 'aria-live'
+      'body': 'aria-live="${1:level}"'
+    'ref':
+      'prefix': 'ref'
+      'body': 'ref={(el) => this.${1:refName} = el}'
+    'PropTypes':
+      'prefix': 'propty'
+      'body': '${1:propName}: PropTypes.${2:type},'
+    'Map State to Props entry':
+      'prefix': 'stpe'
+      'body': '${1:key}: ${2:state}.${3:values}'
+    'Map Dispatch to Props entry':
+      'prefix': 'dtpe'
+      'body': '${1:key}: (${2:args}) => dispatch(${1:key}(${2:args}))'
+
 # Markdown
 
 '.source.gfm':
-  'h1':
-    'prefix': 'h1'
-    'body': '# ${1:header}'
-  'h2':
-    'prefix': 'h2'
-    'body': '## ${1:header}'
-  'h3':
-    'prefix': 'h3'
-    'body': '### ${1:header}'
-  'h4':
-    'prefix': 'h4'
-    'body': '#### ${1:header}'
-  'h5':
-    'prefix': 'h5'
-    'body': '##### ${1:header}'
-  'h6':
-    'prefix': 'h6'
-    'body': '###### ${1:header}'
-  'CSS Highlighting':
-    'prefix': 'css'
-    'body': """
-      ```css
-      ${1:css}
-      ```
-    """
-  'HTML Highlighting':
-    'prefix': 'html'
-    'body': """
-      ```html
-      ${1:html}
-      ```
-    """
-  'JavaScript Highlighting':
-    'prefix': 'javascript'
-    'body': """
-      ```javascript
-      ${1:javascript}
-      ```
-    """
-  'Ruby Highlighting':
-    'prefix': 'ruby'
-    'body': """
-      ```ruby
-      ${1:ruby}
-      ```
-    """
-  'Python Highlighting':
-    'prefix': 'python'
-    'body': """
-      ```python
-      ${1:python}
-      ```
-    """
-  'XML Highlighting':
-    'prefix': 'xml'
-    'body': """
-      ```xml
-      ${1:xml}
-      ```
-    """
-  'Checkbox':
-    'prefix': 'chk'
-    'body': '- [ ] ${1:item}'
+    'h1':
+        'prefix': 'h1'
+        'body': '# ${1:header}'
+    'h2':
+        'prefix': 'h2'
+        'body': '## ${1:header}'
+    'h3':
+        'prefix': 'h3'
+        'body': '### ${1:header}'
+    'h4':
+        'prefix': 'h4'
+        'body': '#### ${1:header}'
+    'h5':
+        'prefix': 'h5'
+        'body': '##### ${1:header}'
+    'h6':
+        'prefix': 'h6'
+        'body': '###### ${1:header}'
+    'CSS Highlighting':
+        'prefix': 'css'
+        'body': """
+                  ```css
+                  ${1:css}
+                  ```
+                """
+    'HTML Highlighting':
+        'prefix': 'html'
+        'body': """
+                  ```html
+                  ${1:html}
+                  ```
+                """
+    'JavaScript Highlighting':
+        'prefix': 'javascript'
+        'body': """
+                  ```javascript
+                  ${1:javascript}
+                  ```
+                """
+    'Ruby Highlighting':
+        'prefix': 'ruby'
+        'body': """
+                  ```ruby
+                  ${1:ruby}
+                  ```
+                """
+    'Python Highlighting':
+        'prefix': 'python'
+        'body': """
+                  ```python
+                  ${1:python}
+                  ```
+                """
+    'XML Highlighting':
+        'prefix': 'xml'
+        'body': """
+                  ```xml
+                  ${1:xml}
+                  ```
+                """
+    'JSON Highlighting':
+        'prefix': 'json'
+        'body': """
+                  ```json
+                  ${1:json}
+                  ```
+                """
+    'Checkbox':
+        'prefix': 'chk'
+        'body': '- [ ] ${1:item}'
+
+# (S)CSS
+'.source.css':
+    'Repeat':
+        'prefix': 'rep'
+        'body': 'repeat(${1:repeats}, ${2:value});'
+    'last-of-type':
+      'prefix': 'last'
+      'body': 'last-of-type'
+    'nth-of-type':
+      'prefix': 'nth'
+      'body': 'nth-of-type(${1:selector})'
+    'not':
+      'prefix': 'not'
+      'body': 'not(${1:selector})'
+# JSON
+'.source.json':
+    'JSON String':
+        'prefix': 'qq'
+        'body': """
+                    ,
+                    "${1:key}": "${2:value}"
+                """
+    'JSON Object':
+          'prefix': 'oo'
+          'body': """
+                    "${1:key}": {
+                        ${2:val}
+                    }
+                  """
+    'JSON Array':
+      'prefix': 'aa'
+      'body': '"${1:key}": [${2:value}]'
+    'JSON Key-Value Pair':
+      'prefix': 'kv'
+      'body': '"${1:key}": ${2:value}'
