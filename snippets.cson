@@ -1,3 +1,24 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 #SVG
 
 '.text.html':
@@ -146,6 +167,15 @@
     'function':
       'prefix': 'f()'
       'body': 'function(${1:args}) {${2:functionMeat}}'
+    'const':
+      'prefix': 'const'
+      'body': 'const ${1:name} = ${2:def}'
+    'export const':
+      'prefix': 'expconst'
+      'body': 'export const ${1:name} = ${2:def}'
+    'dispatch prop':
+      'prefix': 'disprop'
+      'body': '${1:key}: (${2:args}) => dispatch(${3:action}(${2:args}))'
 
 '.source.jsx':
     'entryFile template':
@@ -279,6 +309,16 @@
     'Map Dispatch to Props entry':
       'prefix': 'dtpe'
       'body': '${1:key}: (${2:args}) => dispatch(${1:key}(${2:args}))'
+    'useState':
+      'prefix': 'useState'
+      'body': 'const [${1:stateVar}, ${2:stateChange}] = useState(${3:default});'
+    'useEffect':
+      'prefix': 'useEffect'
+      'body': """
+        useEffect(() => {
+            ${1:function}
+        }, ${2:triggers});
+      """
 
 # Markdown
 
