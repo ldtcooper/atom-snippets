@@ -34,6 +34,14 @@ alias go="git checkout";
 alias gco="git checkout";
 alias tossh="git remote set-url origin"
 alias todev="git checkout develop"
+alias haskell="stack ghci"
+alias cabal="stack cabal"
+alias makevenv="python3 -m venv env";
+alias usevenv="source env/bin/activate"
+
+runflask() {
+    FLASK_APP="$1" FLASK_ENV=development flask run;
+}
 
 newbranch() {
   git checkout -b "$1";
@@ -87,7 +95,7 @@ alias npmi="npm install";
 alias npms="npm start";
 alias npmno="npm run no-server";
 alias npmrb="npm run build";
-alias node10="nvm use 10";
+alias node10="nvm use 10.13.0";
 alias node6="nvm use 6";
 alias node012="nvm use 0.12";
 
